@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pr4</title>
+</head>
+
+<body onload="surprise()" style="background-color: white;">
+    <script>
+    function surprise() {
+      alert(`1`);
+      setTimeout(function(){
+        document.body.style.backgroundColor = "yellow";
+        alert(`2`);
+      }, 1000);
+      setTimeout(function(){
+        alert(`3`);
+      }, 2000);
+      setTimeout(function(){
+        alert(`4`);
+      }, 3000);
+      setTimeout(function(){
+        document.body.style.backgroundColor = "blue";
+        alert(`5`);
+        alert(`Готово! Фон изменился на синий`);
+      }, 4000);
+    }
+    </script>
+    
+    <h1>Сюрприз</h1>
+    <p>Скоро будет еще один цветной сюрприз...</p>
+    
+    </body>
+
+</html>
