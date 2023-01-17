@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr5</title>
+</head>
+
+<body onload="surprise()" style="background-color: white;">
+  <script>
+    // Определяем текущую дату
+    let today = new Date();
+
+    // Определяем день недели
+    let day = today.getDay();
+    let dayName;
+    switch (day) {
+      case 0:
+        dayName = "воскресенье";
+        break;
+      case 1:
+        dayName = "понедельник";
+        break;
+      case 2:
+        dayName = "вторник";
+        break;
+      case 3:
+        dayName = "среда";
+        break;
+      case 4:
+        dayName = "четверг";
+        break;
+      case 5:
+        dayName = "пятница";
+        break;
+      case 6:
+        dayName = "суббота";
+        break;
+    }
+
+    // Определяем дату
+    let date = today.getDate();
+
+    // Определяем месяц
+    let month = today.getMonth();
+    let monthName;
+    switch (month) {
+      case 0:
+        monthName = "января";
+        break;
+      case 1:
+        monthName = "февраля";
+        break;
+      case 2:
+        monthName = "марта";
+        break;
+      case 3:
+        monthName = "апреля";
+        break;
+      case 4:
+        monthName = "мая";
+        break;
+      case 5:
+        monthName = "июня";
+        break;
+      case 6:
+        monthName = "июля";
+        break;
+      case 7:
+        monthName = "августа";
+        break;
+      case 8:
+        monthName = "сентября";
+        break;
+      case 9:
+        monthName = "октября";
+        break;
+      case 10:
+        monthName = "ноября";
+        break;
+      case 11:
+        monthName = "декабря";
+        break;
+    }
+
+    // Определяем год
+    let year = today.getFullYear();
+
+    // Определяем часы, минуты и секунды
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+    let seconds = today.getSeconds();
+
+    // Выводим результат
+    console.log(`В Самаре ${date} ${monthName} ${year}, ${dayName} Время ${hours}:${minutes}:${seconds}`);
+  </script>
+</body>
+
+</html>
