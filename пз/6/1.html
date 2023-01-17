@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr5</title>
+</head>
+
+<body onload="surprise()" style="background-color: white;">
+  <script>
+    let mass1 = ['Банан', 'Яблоко', 'Груша', 'Апельсин', 'Манго', 'Свекла', 'Капуста', 'Морковь', 'Огурец', 'Томат'];
+    let mass2 = ['Тигр', 'Волк', 'Лев', 'Медведь', 'Рысь', 'Синица', 'Филин', 'Ворона', 'Воробей', 'Сорока'];
+
+    let fruits = mass1.filter(item => item !== 'Капуста' && item !== 'Морковь' && item !== 'Огурец' && item !== 'Томат');
+    let bird = mass2.filter(item => item === 'Синица' || item === 'Филин' || item === 'Ворона' || item === 'Воробей' || item === 'Сорока');
+
+    let mass3 = fruits.concat(bird);
+
+    console.log(mass3);
+
+    console.log(mass1.length);
+    console.log(mass2.length);
+    console.log(mass3.length);
+
+
+    mass3.unshift('Мандарин');
+    mass3.push('Соловей');
+
+    console.log(mass3);
+
+    console.log(mass3.length);
+
+    mass3.reverse();
+    console.log(mass3);
+
+    mass3.sort();
+    console.log(mass3);
+
+    let newFruits = fruits.map(item => item + ' съел');
+    console.log(newFruits);
+
+    let newBird = bird.map(item => {
+      if (item === 'Ворона') {
+        return 'Галка';
+      } else if (item === 'Воробей') {
+        return 'Голубь';
+      } else {
+        return item;
+      }
+    });
+    console.log(newBird);
+  </script>
+</body>
+
+</html>
