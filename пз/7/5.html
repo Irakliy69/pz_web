@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr7</title>
+</head>
+
+<body>
+  <script>
+    function showText(backgroundColor, textColor, text) {
+      let paragraph = document.createElement('p');
+      paragraph.style.backgroundColor = backgroundColor;
+      paragraph.style.color = textColor;
+      paragraph.innerText = text;
+      document.body.appendChild(paragraph);
+    }
+
+    showText('#000000', '#FFFFFF', 'Hello World!');
+  </script>
+</body>
+
+</html>
