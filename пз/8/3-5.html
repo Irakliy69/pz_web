@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr8</title>
+  <style>
+    body {
+      background-color: #404040;
+    }
+
+    div {
+      justify-content: center;
+    }
+
+    .hh {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let div = document.createElement('div');
+    div.style.padding = '15px';
+    div.style.width = '300px'
+    div.style.backgroundColor = '#dff0d8';
+    div.style.border = '1px solid #d6e9c6';
+    div.style.borderRadius = '4px';
+    div.style.color = '#3c763d';
+
+    let h3 = document.createElement('h3');
+    h3.innerText = 'Всем привет!';
+    div.appendChild(h3);
+
+    let p = document.createElement('p');
+    p.innerText = 'Это уведомление если что.';
+    div.appendChild(p);
+
+    let button = document.createElement('button');
+    button.innerText = 'Показать уведомление';
+    document.body.appendChild(button);
+
+    button.addEventListener('click', function () {
+      document.body.appendChild(div);
+      setTimeout(function () {
+        div.remove();
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>

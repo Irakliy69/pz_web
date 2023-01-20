@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr8</title>
+  <style>
+    body {
+      background-color: #404040;
+    }
+
+    .hh {
+      display: flex;
+      justify-content: center;
+    }
+    button{
+      height: 50px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hh">
+    <input type="text" id="textInput" value="Привет!">
+    <button onclick="changeText()">Изменить текст</button>
+  </div>
+  <script>
+function changeText() {
+  document.getElementById("textInput").value = "Пока!";
+  document.getElementById("textInput").style.color = "green";
+}
+  </script>
+</body>
+
+</html>

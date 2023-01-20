@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr8</title>
+  <style>
+    body {
+      background-color: #404040;
+      color: white
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    <li>Задача 1</li>
+    <li>Задача 2</li>
+    <li>Задача 3</li>
+  </ol>
+
+  <script>
+    let list = document.querySelector('ol');
+    let item1 = document.createElement('li');
+    item1.innerHTML = '<b>Самая важная задача!!!</b>';
+    list.prepend(item1);
+
+    let item2 = document.createElement('li');
+    item2.innerHTML = '<i>Задача на последок!</i>';
+    list.append(item2);
+  </script>
+</body>
+
+</html>
