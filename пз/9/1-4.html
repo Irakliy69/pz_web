@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr9</title>
+  <style>
+    body {
+      background-color: #404040;
+    }
+
+    .hh {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #009FFF;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .but {
+      margin: 50px 0px 50px 25px;
+    }
+
+    .change {
+      margin: 50px 0px 50px 25px;
+    }
+
+    .change1 {
+      margin: 50px 0px 50px 25px;
+    }
+
+    .lamp {
+      display: flex;
+      margin: 0px 0px 20px 50px;
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+
+    .on {
+      background-color: #ff0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="but">
+    <button onclick="clicks()">Clicks: <span id="clicks">0</span></button>
+  </div>
+
+  <div class="change">
+    <img src="https://www.spisanie.to/wp-content/uploads/2016/08/f475cb315484a7587795d372e22cf50f-740x555.jpg"
+      id="image" height="100px">
+    <button onclick="changeImage()">Change Image</button>
+  </div>
+
+
+  <div class="change1">
+    <img src="https://m.netinfo.bg/media/images/48695/48695257/1250-666-ekzotichna-kysokosmesta-kotka.jpg" id="image1">
+  </div>
+
+
+  <div class="lamp" id="lamp"></div>
+  <button onclick="turnOn()">Turn On</button>
+  <button onclick="turnOff()">Turn Off</button>
+
+  <script>
+    let count = 0;
+    let btn = document.querySelector('#clicks');
+
+    function clicks() {
+      count += 1;
+      btn.innerHTML = count;
+      btn.style.transform = "scale(1.1)";
+      setTimeout(function () {
+        btn.style.transform = "scale(1)";
+      }, 100);
+    }
+
+
+
+    let image = document.querySelector('#image');
+
+    function changeImage() {
+      image.src = "https://miau.bg/files/lib/600x350/exotic-cat.jpg";
+    }
+
+
+
+    let image1 = document.querySelector('#image1');
+
+    image1.addEventListener('mouseover', function () {
+      image1.src = "https://m.netinfo.bg/media/images/50132/50132924/624-400-ekzotichna-kysokosmesta-kotka.jpg";
+      image1.style.height = "200px";
+    });
+
+    image1.addEventListener('mouseout', function () {
+      image1.src = "https://m.netinfo.bg/media/images/48695/48695257/1250-666-ekzotichna-kysokosmesta-kotka.jpg";
+    });
+
+
+
+    let lamp = document.querySelector('#lamp');
+
+    function turnOn() {
+      lamp.classList.add('on');
+    }
+
+    function turnOff() {
+      lamp.classList.remove('on');
+    }
+  </script>
+</body>
+
+</html>
