@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr11</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="apple">Яблоко</button>
+  <button id="orange">Апельсин</button>
+  <button id="banana">Банан</button>
+
+  <script>
+    const appleButton = document.getElementById("apple");
+    const orangeButton = document.getElementById("orange");
+    const bananaButton = document.getElementById("banana");
+
+    appleButton.addEventListener("click", function () {
+      window.open("https://img.freepik.com/free-photo/green-apple-with-leaves_1101-453.jpg?w=2000", "height=400, width=600");
+    });
+
+    orangeButton.addEventListener("click", function () {
+      window.open("https://skin.ru/storage/ingredients/943/xYWmKL5Kcg8x4zEynPFoVwjIal5wuolHBDCbKiUk.jpeg", "height=400, width=600");
+    });
+
+    bananaButton.addEventListener("click", function () {
+      window.open("https://fruitonline.ru/image/cache/catalog/ban1-800x1000.jpg", "height=400, width=600");
+    });
+
+  </script>
+</body>
+
+</html>

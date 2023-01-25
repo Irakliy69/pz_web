@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr11</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    let counter = 10;
+
+    function timer() {
+      document.write(`Прошло: ${counter} сек. <br>`);
+      if (counter > 0) {
+        counter--;
+        setTimeout(timer, 1000);
+        document.body.style.backgroundColor = '#808080';
+        document.body.style.color = 'aliceblue';
+      }
+      else {
+        alert("Время вышло!");
+      }
+    }
+
+    timer();
+  </script>
+</body>
+
+</html>

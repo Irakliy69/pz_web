@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr11</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="clock">
+    <table border="1">
+      <tr>
+        <td>Hours</td>
+        <td>Minutes</td>
+        <td>Seconds</td>
+      </tr>
+      <tr>
+        <td id="hours"></td>
+        <td id="minutes"></td>
+        <td id="seconds"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+
+    function updateClock() {
+      const now = new Date();
+      const currentHour = now.getHours();
+      const currentMinute = now.getMinutes();
+      const currentSecond = now.getSeconds();
+      const remainingHours = 23 - currentHour;
+      const remainingMinutes = 59 - currentMinute;
+      const remainingSeconds = 59 - currentSecond;
+      hours.innerHTML = remainingHours;
+      minutes.innerHTML = remainingMinutes;
+      seconds.innerHTML = remainingSeconds;
+    }
+
+    setInterval(updateClock, 1000);
+
+  </script>
+</body>
+
+</html>
