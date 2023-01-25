@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr10</title>
+  <style>
+    body {
+      background-color: #404040;
+      color: aliceblue;
+    }
+
+    button {
+      background-color: #949494;
+      color: rgb(49, 49, 49);
+    }
+
+  </style>
+</head>
+
+<body>
+  <input type="text" id="input">
+  <button id="blockBtn">Block</button>
+  <button id="unblockBtn">Unblock</button>
+
+  <script>
+
+    const input = document.getElementById("input");
+    const blockBtn = document.getElementById("blockBtn");
+    const unblockBtn = document.getElementById("unblockBtn");
+
+    blockBtn.addEventListener("click", function () {
+      input.disabled = true;
+    });
+
+    unblockBtn.addEventListener("click", function () {
+      input.disabled = false;
+    });
+  </script>
+
+</body>
+
+</html>

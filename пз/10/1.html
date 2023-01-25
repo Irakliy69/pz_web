@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr10</title>
+  <style>
+    body {
+      background-color: #404040;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label>Длина: <input type="number" id="length" /></label>
+    <label>Ширина: <input type="number" id="width" /></label>
+    <input type="button" value="Calculate" onclick="calculate()" />
+    <label>S: <input type="number" id="perimeter" readonly /></label>
+  </form>
+
+
+  <script>
+    function calculate() {
+      let length = document.getElementById('length').value;
+      let width = document.getElementById('width').value;
+      let e = 2;
+      let area = length * width;
+      let perimeter = e * area;
+      document.getElementById('area').value = area;
+    }
+  </script>
+</body>
+
+</html>

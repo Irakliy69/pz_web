@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr10</title>
+  <style>
+    body {
+      background-color: #404040;
+      color: aliceblue;
+    }
+    textarea {
+      background-color: #313131;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="teacher-info"></textarea>
+  <ul>
+    <li onmouseover="showTeacherInfo('Math', 'John Smith')" onmouseout="clearTeacherInfo()">Math</li>
+    <li onmouseover="showTeacherInfo('Physics', 'Jane Doe')" onmouseout="clearTeacherInfo()">Physics</li>
+    <li onmouseover="showTeacherInfo('Biology', 'Bob Johnson')" onmouseout="clearTeacherInfo()">Biology</li>
+  </ul>
+
+  <script>
+    function showTeacherInfo(subject, teacher) {
+      document.getElementById("teacher-info").value = subject + ": " + teacher;
+    }
+
+    function clearTeacherInfo() {
+      document.getElementById("teacher-info").value = "";
+    }
+  </script>
+
+</body>
+
+</html>

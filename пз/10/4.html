@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr10</title>
+  <style>
+    body {
+      background-color: #404040;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="checkbox">
+  <button id="btn">Check</button>
+  <p id="result"></p>
+
+  <script>
+    const checkbox = document.getElementById("checkbox");
+    const btn = document.getElementById("btn");
+    const result = document.getElementById("result");
+
+    btn.addEventListener("click", function () {
+      if (checkbox.checked) {
+        result.innerHTML = "Привет";
+      } else {
+        result.innerHTML = "Пока";
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
