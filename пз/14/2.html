@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr14</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+
+    canvas {
+      border: 1px solid #d3d3d3;
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  llll <br>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var spriteWidth = 400;
+    var spriteHeight = 200;
+    var spriteImage = new Image();
+    spriteImage.src = "https://w7.pngwing.com/pngs/38/564/png-transparent-pixel-art-drawing-pixels-miscellaneous-bead-pixelation.png";
+    var spriteX = 0;
+    var spriteY = 0;
+    var spriteSpeed = 5;
+    function drawSprite() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(spriteImage, spriteX, spriteY, spriteWidth, spriteHeight);
+      spriteX += spriteSpeed;
+      if (spriteX > canvas.width) {
+        spriteX = 0;
+      }
+    }
+    setInterval(drawSprite, 50);
+  </script>
+</body>
+
+</html>

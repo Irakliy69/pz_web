@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr13</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  llll <br>
+  <script>
+    class Worker {
+      constructor(name, surname, rate, days) {
+        this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
+      }
+
+      getSalary() {
+        return this.rate * this.days;
+      }
+    }
+
+    let worker1 = new Worker('John', 'Smith', 10, 20);
+    let worker2 = new Worker('Jack', 'White', 15, 25);
+
+    document.write(`${worker1.name} ${worker1.surname} зарплата ${worker1.getSalary()}<br>`);
+    document.write(`${worker2.name} ${worker2.surname} зарплата ${worker2.getSalary()}<br>`);
+    document.write(`Сумма зарплат 1 и 2 ${worker1.getSalary() + worker2.getSalary()}`);
+  </script>
+</body>
+
+</html>

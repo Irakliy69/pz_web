@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr15</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .list {
+      background: #4e4e4e;
+      padding: 10px;
+    }
+
+    .toggle-list {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  llll <br>
+  <div class="container">
+    <div class="list">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+    </div>
+    <a href="#" class="toggle-list">Свернуть</a>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.toggle-list').click(function () {
+        $('.list').slideToggle('slow');
+        var text = $(this).text() == 'Свернуть' ? 'Развернуть' : 'Свернуть';
+        $(this).text(text);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr15</title>
+  <script src="./jquery-3.6.3.js"></script>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+
+    .list {
+      background: #4e4e4e;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $("#list").slideToggle("slow");
+      });
+      $("#show").click(function () {
+        $("#list").slideToggle("slow");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  llll <br>
+  <div id="list">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+  </div>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+</body>
+
+</html>

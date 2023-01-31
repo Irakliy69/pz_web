@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr16</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  llll <br>
+  <div id="app">
+    <p @mouseover="changeText('Новое сообщение')" @mouseleave="changeText('Старое сообщение')">{{ message }}</p>
+    <input type="text" v-model="color">
+    <button @click="toggleImage">Показать/скрыть изображение</button>
+    <img v-if="showImage" src="image1.jpg">
+    <ul>
+      <li v-for="(subject, teacher) in subjects">{{ subject }}</li>
+      <li v-for="(subject, teacher) in subjects">{{ subject }} - {{ teacher }}</li>
+    </ul>
+  </div>
+
+  <script>
+    // Создаем новый экземпляр Vue
+    new Vue({
+      // Указываем элемент, к которому применяется Vue
+      el: '#app',
+      // Данные, которые будут использоваться в приложении
+      data: {
+        message: 'Старое сообщение',
+        color: '',
+        showImage: false,
+        subjects: {
+          'Веб-программирование': 'Шомас Елена Александровна',
+          'Установка и сопровождение программного обеспечения': 'Михалькова Ирина Евгеньевна',
+          'Иностранный язык': 'Карпеева Александра Сергеевна'
+        }
+      },
+      // Методы, которые будут использоваться в приложении
+      methods: {
+        changeText(text) {
+          this.message = text;
+        },
+        toggleImage() {
+          this.showImage = !this.showImage;
+        }
+      },
+      // Наблюдатели, которые будут использоваться в приложении
+      watch: {
+        color(value) {
+          document.body.style.color = value;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

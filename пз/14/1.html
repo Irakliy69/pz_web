@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pr14</title>
+  <style>
+    body {
+      background-color: #808080;
+      color: aliceblue;
+    }
+
+    canvas {
+      border: 1px solid #d3d3d3;
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  llll <br>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // решетка
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 0);
+    ctx.lineTo(400, 400);
+    ctx.lineTo(0, 400);
+    ctx.lineTo(0, 0);
+    ctx.strokeStyle = "#000000";
+    ctx.stroke();
+
+    // елка
+    ctx.beginPath();
+    ctx.moveTo(200, 0);
+    ctx.lineTo(100, 200);
+    ctx.lineTo(300, 200);
+    ctx.fillStyle = "#00FF00";
+    ctx.fill();
+
+    // домик
+    ctx.beginPath();
+    ctx.rect(150, 200, 100, 100);
+    ctx.fillStyle = "#FF0000";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.rect(175, 250, 50, 50);
+    ctx.fillStyle = "#FFFF00";
+    ctx.fill();
+
+    // смайл
+    ctx.beginPath();
+    ctx.arc(200, 350, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "#FF00FF";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(175, 325, 10, 0, 2 * Math.PI);
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(225, 325, 10, 0, 2 * Math.PI);
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(200, 350, 25, 0, Math.PI);
+    ctx.strokeStyle = "#000000";
+    ctx.stroke();
+  </script>
+</body>
+
+</html>

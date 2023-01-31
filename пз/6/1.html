@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pr6</title>
+  <title>pr5</title>
 </head>
 
 <body>
+  llll <br>
   <script>
     let mass1 = ['Банан', 'Яблоко', 'Груша', 'Апельсин', 'Манго', 'Свекла', 'Капуста', 'Морковь', 'Огурец', 'Томат'];
     let mass2 = ['Тигр', 'Волк', 'Лев', 'Медведь', 'Рысь', 'Синица', 'Филин', 'Ворона', 'Воробей', 'Сорока'];
@@ -18,28 +19,28 @@
 
     let mass3 = fruits.concat(bird);
 
-    console.log(mass3);
+    document.write(mass3 + '<br>');
 
-    console.log(mass1.length);
-    console.log(mass2.length);
-    console.log(mass3.length);
+    document.write(mass1.length + '<br>');
+    document.write(mass2.length + '<br>');
+    document.write(mass3.length + '<br>');
 
 
-    mass3.unshift('Мандарин');
-    mass3.push('Соловей');
+    document.write('Мандарин' + "<br>");
+    document.write('Соловей' + "<br>");
 
-    console.log(mass3);
+    document.write(mass3 + "<br>");
 
-    console.log(mass3.length);
+    document.write(mass3.length + "<br>");
 
     mass3.reverse();
-    console.log(mass3);
+    document.write(mass3 + "<br>");
 
     mass3.sort();
-    console.log(mass3);
+    document.write(mass3 + "<br>");
 
     let newFruits = fruits.map(item => item + ' съел');
-    console.log(newFruits);
+    document.write(newFruits + "<br>");
 
     let newBird = bird.map(item => {
       if (item === 'Ворона') {
@@ -50,7 +51,7 @@
         return item;
       }
     });
-    console.log(newBird);
+    document.write(newBird);
   </script>
 </body>
 
